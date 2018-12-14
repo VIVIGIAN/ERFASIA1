@@ -1,0 +1,159 @@
+
+ΑΣΚΗΣΗ 2
+
+1.
+struct  node{
+
+int data;
+node *next;
+
+class mylist{
+node *head, *temp, *curr;
+
+mylist();
+void push_back(int);
+curr=head;
+
+while(curr != NULL){
+curr=curr-> next;
+}
+curr->next= temp;
+temp-> next= NULL;
+delete curr;
+
+2.
+struct  node{
+
+int data;
+node *next;
+
+class mylist{
+node *head, *neos;
+
+mylist();
+void Push_front(int);
+neos-> next= head;
+head= neos;
+
+3.
+struct  node{
+
+int data;
+node *next;
+
+class mylist{
+node *head, *curr, *temp;
+int a;
+
+mylist();
+void insert_at_position(int);
+curr=head;
+for(a=1; a<data; a++){
+curr=curr->next;
+temp->next= curr->next;
+curr->next=temp;
+
+4.
+void mylist:: print_list(){
+node *temp = new node;
+
+while(temp != NULL){
+cout << temp-> data << “\t”;
+temp = temp-> next;
+
+node *temp = new node;
+temp = head;
+while (temp != NULL){
+ cout << temp-> data << “\t”;
+temp = temp-> next;
+
+int main(){
+
+ void mylist::print_list()
+{
+node *temp = head;
+
+while(temp!= NULL){
+  cout << temp-> data << “\t”;
+}
+}
+int main()
+}
+
+
+
+5.
+
+struct  node{
+
+int data;
+node *next;
+
+class mylist{
+node *head, *curr1,*curr2 ;
+int a, int pos;
+
+mylist();
+void delete_from_position(int);
+
+curr1=head;
+curr2=head;
+
+for(a=1;a<pos; a++){
+cur1=cur1->next;
+}
+
+for(a=1;a<pos-1; a++){
+cur2=cur2->next;
+}
+
+cur2->next=cur1->next;
+cur1->next=NULL;
+delete cur1;
+6.
+ struct  node{
+
+int data;
+node *next;
+
+class mylist{
+
+int i, int j;
+
+mylist();
+void bubble_sort(int);
+
+for(i=0;i<N; i++){
+ for(J=N-1; J>I +1; J--){
+    if(pinaka[J]<pinaka[j-1])
+       Swap(&pinaka[j], &pinaka[j-1]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
