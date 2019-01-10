@@ -1,0 +1,198 @@
+ASKHSH2
+1.
+#include <iostream>
+#include <random>
+#include <vector>
+#include <algorithm>
+#include <chrono>
+
+#define N 10000
+
+using namespace std;
+using namespace std:: chrono;
+int main(){
+long seed = time(NULL);
+mt19937 (seed);
+uniform_int_distribution<int> dist (0,100000);
+int A[N];
+for(int i=0;i<N;i++){
+   A[i] = dist(mt);
+  // cout << A[i] << endl;
+}
+auto t1 = high_resolution_clock:: now();
+vector<int> v;
+for (int i=0; i<N;i++){
+    v.push_back(A[i]);
+}
+sort(v.begin(), v.end());
+
+int c=0;
+for (int i=0;i=10000000;i++){
+int x = dist(mt);
+bool f = binary_search(v.begin(),v.end(),x);
+if(!f)
+  c ++;
+}
+cout<< “Items not found” << c << endl;
+auto t2 = high_resolution_clock::now();
+cout << “Elapsed time” << (t2-t1).count() / 1E9<< endl;
+}
+
+
+
+2.
+#include <iostream>
+#include <conio.h>
+
+using  namespace std;
+
+
+class mydtree
+{
+   class node
+  {
+
+   public:
+       int data;
+       node *left;
+       node *right;
+};
+
+node *root;
+node *newnode(int num)
+{
+     node *neos;
+     neos = new(nothrow) node;
+     neos->data = num;
+     neos->left = NULL;
+     neos->right =NULL;
+    return(neos);
+
+public:
+   node *find(int ptr)
+    {
+         node *current;
+         while(current->data != ptr)
+         {
+          if(ptr < current-> data)
+              current = current->left;
+          else
+              current = current-> right;
+          if(current == NULL)
+              return NULL;
+          }
+return current;
+}
+
+3.
+
+Private:
+   Item *st;
+   int N, M;
+   Item nullItem;
+
+Public:
+  ST (int maxN)
+     {
+        N=0; M=2*maxN;
+         st= new Item[M];
+         for (int i=0; I < M; i++) st[i]=nullItem;
+}
+Int count() comst { return N; }
+void insert(Item item)
+{
+    int i=hash(item.key(), M);
+    while(!st[i].null()) i=(i +1) % M;
+    st[i] = item; N++;
+}
+Item searth (key v)
+{
+     int i=hash(v, M);
+     while(!st[i].null())
+     if(v ==st[i].key()) 
+        return st[i];
+    else
+       i=(i+1) % M;
+    return nulIitem;
+}
+
+
+4.
+
+this.storage={};
+
+add(str){
+  this.storage[str]=1;
+}
+contains(str){
+  if(!!this.storage[str]){
+    return true;
+}
+return false;
+}
+
+class bloomfilter{
+   constructor(size){
+     this.size=size;
+     this.storage= new Array(size)fill(0,0);
+}
+add(str){
+   this.storage[this.hashit(str,this.size)]=1;
+   this.storage[this.hashit2(str,this.size)]=1;
+   this.storage[this.hashit3(str,this.size)]=1;
+
+}
+contains(str){
+return!!this.storage[this.hashit(str,this.size)] && this.storage[this.hashit2(str,this.size)]&& this.storage[this.hashit3(str,this.size)]
+
+ }
+hashit(str,size){
+ letcoded=0;
+ for(let i=0; i<str.length; i++){
+  coded +=str[i].char(aded)*i+1;
+}
+return Mathfloor(coded%size)
+}
+
+hashit2(str,size){
+ letcoded=0;
+ for(let i=0; i<str.length; i++){
+  coded +=(str[i].char(aded *2)%size)
+}
+
+hashit3(str,size){
+ letcoded=0;
+ for(let i=0; i<str.length; i++){
+  coded +=(str[i].char(added *3)%size)
+}
+
+class bloomfiltertester{
+constructor(){
+  this.storage=new bloomfilter(100000);
+   }
+}
+
+class objecttester{
+ constructor(){
+this.objectstorage={};
+for(let i=0; i<100000; i++){
+  this.objectsstorage[${i}]=0;
+    }
+  }
+}
+
+class objecttesterstrings{
+  constructor(){
+     this.objectstorage={};
+      for(let i=0; i<100000; i++){
+         this objectstorage[i]=0;
+  }
+}
+
+let testbloomfilter=new bloomfiltertest();
+let testobject=new objecttester();
+let testobjectstrings=new objectstrings();
+
+
+ 
+
